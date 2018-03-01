@@ -40,7 +40,7 @@ ref_stack_name = Ref('AWS::StackName')
 quad_zero_ip = constants.QUAD_ZERO  # '0.0.0.0/0'
 
 candidate_id= 'candidate-8578e887'
-candidate_name= 'mkowalsky'
+candidate_name= 'israt'
 
 add_elk_instance = True
 
@@ -66,15 +66,15 @@ jenkins_instance_type_param = t.add_parameter(Parameter(
         'cc2.8xlarge',
         'cg1.4xlarge',
     ],
-    ConstraintDescription='Must be a valid EC2 instance type.',
+    ConstraintDescription='t2.small.',
 ))
 
 
 ssh_key_param = t.add_parameter(Parameter(
     'sshKeyParam',
     Type = 'String',
-    Description= 'SSH KeyPair Name used to SSH into Instances',
-    ConstraintDescription='Must Not be Empty',
+    Description= 'tashfin-key',
+    ConstraintDescription='t2.small',
     MinLength=3
 ))
 
