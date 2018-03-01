@@ -238,7 +238,7 @@
         "Tags": [
           {
             "Key": "Candidate",
-            "Value": "mkowalsky"
+            "Value": "israt"
           },
           {
             "Key": "Name",
@@ -253,7 +253,7 @@
         "Tags": [
           {
             "Key": "Candidate",
-            "Value": "mkowalsky"
+            "Value": "israt"
           }
         ]
       },
@@ -316,7 +316,7 @@
         "Tags": [
           {
             "Key": "CandidateName",
-            "Value": "mkowalsky"
+            "Value": "israt"
           },
           {
             "Key": "Name",
@@ -331,7 +331,7 @@
                 "#!/bin/bash\n",
                 "service ufw stop\n",
                 "apt-get update\n",
-                "apt-get python-pycurl -y\n",
+                "apt-get install python-pycurl -y\n",
                 "apt-get install software-properties-common -y\n",
                 "apt-add-repository ppa:ansible/ansible\n",
                 "apt-get update\n",
@@ -392,7 +392,7 @@
         "Tags": [
           {
             "Key": "CandidateName",
-            "Value": "mkowalsky"
+            "Value": "israt"
           },
           {
             "Key": "Name",
@@ -409,9 +409,9 @@
                 "apt-get update\n",
                 "apt-get install python-pip -y\n",
                 "pip install awscli\n",
-                "wget -O ~/bitnami-jenkins-1.639-0-linux-x64-installer.run https://bitnami.com/redirect/to/83504/bitnami-jenkins-1.639-0-linux-x64-installer.run?bypassauth=false\n",
-                "chmod 754 ~/bitnami-jenkins-1.639-0-linux-x64-installer.run\n",
-                "~/bitnami-jenkins-1.639-0-linux-x64-installer.run --prefix /opt/jenkins --mode unattended --base_password ",
+                "wget -O ~/bitnami-jenkins-2.89.4-0-linux-x64-installer.run https://bitnami.com/redirect/to/177955/bitnami-jenkins-2.89.4-0-linux-x64-installer.run?bypassauth=false\n",
+                "chmod 754 ~/bitnami-jenkins-2.89.4-0-linux-x64-installer.run\n",
+                "~/bitnami-jenkins-2.89.4-0-linux-x64-installer.run --prefix /opt/jenkins --mode unattended --base_password ",
                 {
                   "Ref": "jenkinsPWParam"
                 },
@@ -517,7 +517,7 @@
         "Tags": [
           {
             "Key": "Candidate",
-            "Value": "mkowalsky"
+            "Value": "israt"
           }
         ],
         "VpcId": {
@@ -576,7 +576,7 @@
         "Tags": [
           {
             "Key": "Candidate",
-            "Value": "mkowalsky"
+            "Value": "israt"
           },
           {
             "Key": "Name",
