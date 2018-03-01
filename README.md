@@ -18,7 +18,7 @@ Create an AWS VPC with Cloudformation Template with  publicly accessible subnet 
 Create a new key in aws console as jenkins-elk-cloud
 
 
-Execute the Cloudformation script called  "jenkins_ELK_cfn_vpc_template.json" from aws console: cloud formationo.
+Execute the Cloudformation script called  "jenkins_ELK_cfn_vpc_template.json" from aws console: cloud formation.
 
 
 
