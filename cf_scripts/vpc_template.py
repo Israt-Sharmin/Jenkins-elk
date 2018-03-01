@@ -1,12 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-"""
-Generates Cloud Formation Script
 
-Info on the python library used to generate the script
-https://github.com/cloudtools/troposphere
-
-"""
 
 import os
 import datetime
