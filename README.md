@@ -1,5 +1,5 @@
-# jenkins-elk-cloud
-Simple repository using Cloudformation to deploy Jenkins and ELK Stack
+# Jenkins-elk-cloud
+The repository using Cloudformation to deploy Jenkins and ELK Stack
 
 ## Objective:
 
@@ -14,5 +14,12 @@ A Cloudformation template that launches a Jenkins AMI prepackaged with the job. 
 Create an AWS VPC with Cloudformation Template with  publicly accessible subnet and the appropriate Security Group. 
 
 ## How to Run 
-Execute the Cloudformation script called  "jenkins_cfn_vpc_template.json"
+
+Create a new key in aws console as jenkins-elk-cloud
+
+
+Execute the Cloudformation script called  "jenkins_ELK_cfn_vpc_template.json" from aws console: cloud formationo.
+
+
+
 
