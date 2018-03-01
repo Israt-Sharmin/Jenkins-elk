@@ -15,15 +15,7 @@ def volumeAttachment_helper(volume,instance, device='/dev/xvdb'):
 
 
 def create_and_attach_volume(template,title, instance,device='/dev/xvdb', **kwargs):
-    """
-
-    :param template: Reference to the Template
-    :param title:  Name of VOlume which will be appended to Instance Name
-    :param instance: Instance teh volume will be attahed to
-    :param device: Device name of volume, eg /dev/xvdb
-    :param kwargs: Keyword arguments that are passed to the Volume Consctructor
-    :return:
-    """
+  
     # if 'VolumeType' not in kwargs:
     #     kwargs['VolumeType']="gp2"
     if 'Size' not in kwargs:
