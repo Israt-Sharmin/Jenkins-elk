@@ -12,10 +12,10 @@ def jenkins_userData(password,region, stack_name,**kwargs):
         'wget -O ~/bitnami-jenkins-2.89.4-0-linux-x64-installer.run https://bitnami.com/redirect/to/177955/bitnami-jenkins-2.89.4-0-linux-x64-installer.run?bypassauth=false\n',
         'chmod 754 ~/bitnami-jenkins-2.89.4-0-linux-x64-installer.run\n',
         '~/bitnami-jenkins-2.89.4-0-linux-x64-installer.run --prefix /opt/jenkins --mode unattended --base_password ',password,'\n',
-        'wget -O /tmp/jenkins_elk.json https://raw.githubusercontent.com/mkowalsky/jenkins-elk-cloud/master/jenkins_ELK_cfn_vpc_template.json\n',
-        'wget -O /opt/update-stack.sh https://raw.githubusercontent.com/mkowalsky/jenkins-elk-cloud/master/update-stack.sh\n',
+        'wget -O /tmp/jenkins_elk.json https://github.com/Israt-Sharmin/Jenkins-elk/blob/master/jenkins_ELK_cfn_vpc_template.json\n',
+        'wget -O /opt/update-stack.sh https://github.com/Israt-Sharmin/Jenkins-elk/blob/master/update-stack.sh\n',
         'chmod 754 /opt/update-stack.sh\n',
-        'wget -O /tmp/jenkinsJob.xml https://raw.githubusercontent.com/mkowalsky/jenkins-elk-cloud/master/jenkinsJob.xml\n',
+        'wget -O /tmp/jenkinsJob.xml https://github.com/Israt-Sharmin/Jenkins-elk/blob/master/jenkinsJob.xml\n',
         'curl -u user:', password,' -X POST -H "Content-Type:application/xml" -d @/tmp/jenkinsJob.xml "http://localhost/jenkins/createItem?name=DeployELK" \n'
         'curl -u user:',password,' -X POST http://localhost/jenkins/job/DeployELK/buildWithParameters?stack_name=',stack_name,'&input_file=/tmp/jenkins_elk.json&stack_region=',region,'\n',
     ]))
@@ -30,6 +30,6 @@ def elk_userData(**kwargs):
         'apt-add-repository ppa:ansible/ansible\n',
         'apt-get update\n',
         'apt-get install ansible -y\n',
-        'wget https://raw.githubusercontent.com/mkowalsky/jenkins-elk-cloud/master/cm_tool/elk_stack.yml\n',
+        'wget https://github.com/Israt-Sharmin/Jenkins-elk/blob/master/cm_tool/elk_stack.yml\n',
         'ansible-playbook -i "127.0.0.1," elk_stack.yml',
     ]))
