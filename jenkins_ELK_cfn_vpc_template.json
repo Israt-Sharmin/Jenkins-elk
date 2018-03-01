@@ -1,106 +1,7 @@
 {
-  "Description": "Cloud Formation Template.  Template Created: 2015-12-09 23:12:31",
+  "Description": "Cloud Formation Template.  Template Created: 2015-12-09 23:12:17",
   "Mappings": {
     "AWSInstanceType2Arch": {
-      "c1.medium": {
-        "Arch": "PV64"
-      },
-      "c1.xlarge": {
-        "Arch": "PV64"
-      },
-      "c3.2xlarge": {
-        "Arch": "HVM64"
-      },
-      "c3.4xlarge": {
-        "Arch": "HVM64"
-      },
-      "c3.8xlarge": {
-        "Arch": "HVM64"
-      },
-      "c3.large": {
-        "Arch": "HVM64"
-      },
-      "c3.xlarge": {
-        "Arch": "HVM64"
-      },
-      "cc2.8xlarge": {
-        "Arch": "HVM64"
-      },
-      "cr1.8xlarge": {
-        "Arch": "HVM64"
-      },
-      "g2.2xlarge": {
-        "Arch": "HVMG2"
-      },
-      "hi1.4xlarge": {
-        "Arch": "HVM64"
-      },
-      "hs1.8xlarge": {
-        "Arch": "HVM64"
-      },
-      "i2.2xlarge": {
-        "Arch": "HVM64"
-      },
-      "i2.4xlarge": {
-        "Arch": "HVM64"
-      },
-      "i2.8xlarge": {
-        "Arch": "HVM64"
-      },
-      "i2.xlarge": {
-        "Arch": "HVM64"
-      },
-      "m1.large": {
-        "Arch": "PV64"
-      },
-      "m1.medium": {
-        "Arch": "PV64"
-      },
-      "m1.small": {
-        "Arch": "PV64"
-      },
-      "m1.xlarge": {
-        "Arch": "PV64"
-      },
-      "m2.2xlarge": {
-        "Arch": "PV64"
-      },
-      "m2.4xlarge": {
-        "Arch": "PV64"
-      },
-      "m2.xlarge": {
-        "Arch": "PV64"
-      },
-      "m3.2xlarge": {
-        "Arch": "HVM64"
-      },
-      "m3.large": {
-        "Arch": "HVM64"
-      },
-      "m3.medium": {
-        "Arch": "HVM64"
-      },
-      "m3.xlarge": {
-        "Arch": "HVM64"
-      },
-      "r3.2xlarge": {
-        "Arch": "HVM64"
-      },
-      "r3.4xlarge": {
-        "Arch": "HVM64"
-      },
-      "r3.8xlarge": {
-        "Arch": "HVM64"
-      },
-      "r3.large": {
-        "Arch": "HVM64"
-      },
-      "r3.xlarge": {
-        "Arch": "HVM64"
-      },
-      "t1.micro": {
-        "Arch": "PV64"
-      },
       "t2.medium": {
         "Arch": "HVM64"
       },
@@ -112,33 +13,8 @@
       }
     },
     "ubuntu14AWSRegionArch2AMI": {
-      "ap-northeast-1": {
-        "HVM64": "ami-936d9d93"
-      },
-      "ap-southeast-1": {
-        "HVM64": "ami-96f1c1c4"
-      },
-      "ap-southeast-2": {
-        "HVM64": "ami-69631053"
-      },
-      "eu-central-1": {
-        "HVM64": "ami-accff2b1"
-      },
-      "eu-west-1": {
-        "HVM64": "ami-47a23a30"
-      },
-      "sa-east-1": {
-        "HVM64": "ami-4d883350"
-      },
       "us-east-1": {
         "HVM64": "ami-d05e75b8"
-      },
-      "us-west-1": {
-        "HVM64": "ami-df6a8b9b"
-      },
-      "us-west-2": {
-        "HVM64": "ami-5189a661"
-      }
     }
   },
   "Outputs": {
@@ -174,29 +50,6 @@
         "t2.micro",
         "t2.small",
         "t2.medium",
-        "m3.medium",
-        "m3.large",
-        "m3.xlarge",
-        "m3.2xlarge",
-        "c3.large",
-        "c3.xlarge",
-        "c3.2xlarge",
-        "c3.4xlarge",
-        "c3.8xlarge",
-        "r3.large",
-        "r3.xlarge",
-        "r3.2xlarge",
-        "r3.4xlarge",
-        "r3.8xlarge",
-        "i2.xlarge",
-        "i2.2xlarge",
-        "i2.4xlarge",
-        "i2.8xlarge",
-        "hi1.4xlarge",
-        "hs1.8xlarge",
-        "cr1.8xlarge",
-        "cc2.8xlarge",
-        "cg1.4xlarge"
       ],
       "ConstraintDescription": "Must be a valid EC2 instance type.",
       "Default": "m3.medium",
@@ -336,7 +189,7 @@
                 "apt-add-repository ppa:ansible/ansible\n",
                 "apt-get update\n",
                 "apt-get install ansible -y\n",
-                "wget https://raw.githubusercontent.com/mkowalsky/jenkins-elk-cloud/master/cm_tool/elk_stack.yml\n",
+                "wget https://github.com/Israt-Sharmin/Jenkins-elk/blob/master/cm_tool/elk_stack.yml\n",
                 "ansible-playbook -i \"127.0.0.1,\" elk_stack.yml"
               ]
             ]
@@ -416,10 +269,10 @@
                   "Ref": "jenkinsPWParam"
                 },
                 "\n",
-                "wget -O /tmp/jenkins_elk.json https://raw.githubusercontent.com/mkowalsky/jenkins-elk-cloud/master/jenkins_ELK_cfn_vpc_template.json\n",
-                "wget -O /opt/update-stack.sh https://raw.githubusercontent.com/mkowalsky/jenkins-elk-cloud/master/update-stack.sh\n",
+                "wget -O /tmp/jenkins_elk.json https://github.com/Israt-Sharmin/Jenkins-elk/blob/master/jenkins_ELK_cfn_vpc_template.json\n",
+                "wget -O /opt/update-stack.sh https://github.com/Israt-Sharmin/Jenkins-elk/blob/master/update-stack.sh\n",
                 "chmod 754 /opt/update-stack.sh\n",
-                "wget -O /tmp/jenkinsJob.xml https://raw.githubusercontent.com/mkowalsky/jenkins-elk-cloud/master/jenkinsJob.xml\n",
+                "wget -O /tmp/jenkinsJob.xml https://github.com/Israt-Sharmin/Jenkins-elk/blob/master/jenkinsJob.xml\n",
                 "curl -u user:",
                 {
                   "Ref": "jenkinsPWParam"
